@@ -1,0 +1,30 @@
+
+import java.util.Scanner;
+
+public class Basic_15_ArmstrongOrNot {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int n;
+        System.out.print("n: ");
+        n = input.nextInt();
+        int x = n;
+        int y = n;
+        int count = 0;
+        while (x != 0) {
+            x = x / 10;
+            count++;
+        }
+        int sum = 0;
+        int rem = 0;
+        while (y != 0) {
+            rem = y % 10;
+            sum = sum + (int) Math.pow(rem, count);
+            y = y / 10;
+        }
+        if (sum == n)
+            System.out.print(n + " is armstrong");
+        else
+            System.out.println("not armstrong");
+
+    }
+}
