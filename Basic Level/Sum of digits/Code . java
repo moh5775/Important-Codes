@@ -1,0 +1,18 @@
+
+import java.util.Scanner;
+
+public class Basic_1_SumOfDigits {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int n;
+        System.out.print("n: ");
+        n = input.nextInt();
+        int rem, sum = 0;
+        while (n != 0) {
+            rem = n % 10;
+            sum = sum + rem;
+            n = n / 10;
+        }
+        System.out.print("Summation of digits: " + sum);
+    }
+}
