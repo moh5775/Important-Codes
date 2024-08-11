@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class Basic_11_Factorial {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int n;
+        System.out.print("Number: ");
+        n = input.nextInt();
+        int i, fact = 1;
+        for (i = 1; i <= n; i++) {
+            fact = fact * i;
+        }
+        System.out.println("Factorial of " + n + " : " + fact);
+    }
+}
