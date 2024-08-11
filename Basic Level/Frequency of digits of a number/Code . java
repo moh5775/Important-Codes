@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Basic_6_FrequencyOfDigits {
+    public static void main(String[] args) {
+        final int BASE = 10;
+        int[] freq = new int[BASE];
+        Scanner input = new Scanner(System.in);
+        int n, i;
+        for (i = 0; i < BASE; i++) {
+            freq[i] = 0;
+        }
+        System.out.print("n: ");
+        n = input.nextInt();
+        int rem = 0;
+        while (n != 0) {
+            rem = n % 10;
+            freq[rem]++;
+            n = n / 10;
+        }
+        for (i = 0; i < BASE; i++) {
+            if (freq[i] > 0)
+                System.out.println("Digit " + i + " : " + freq[i] + " times");
+        }
+    }
+}
