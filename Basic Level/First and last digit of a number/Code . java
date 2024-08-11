@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Basic_5_FirstAndLastDigit {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int n, x;
+        System.out.print("n: ");
+        n = input.nextInt();
+        x = n;
+        int rem = 0;
+        while (n != 0) {
+            rem = n % 10;
+            n = n / 10;
+        }
+        System.out.println("1st digit: " + rem);
+        int last_digit = x % 10;
+        System.out.println("Last Digit: " + last_digit);
+    }
+}
