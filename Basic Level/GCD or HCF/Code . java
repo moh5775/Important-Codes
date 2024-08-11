@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Basic_12_GCDorHCF {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int m, n, i;
+        System.out.print("Enter a number: ");
+        m = input.nextInt();
+        System.out.print("Enter another number: ");
+        n = input.nextInt();
+        int hcf = 0;
+        for (i = 1; i <= m && i <= n; i++) {
+            if (m % i == 0 && n % i == 0) {
+                hcf = i;
+            }
+        }
+        System.out.println("Greatest common divisor: " + hcf);
+    }
+}
