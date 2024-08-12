@@ -1,0 +1,12 @@
+
+import java.util.Scanner;
+
+public class String_2_LowercaseToUppercase {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String str = input.nextLine();
+        String up = str.toUpperCase();
+        System.out.println("Converted String: " + up);
+    }
+}
