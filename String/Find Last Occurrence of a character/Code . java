@@ -1,0 +1,21 @@
+
+import java.util.Scanner;
+
+public class String_8_LastOccurance {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter String: ");
+        String str = input.nextLine();
+        System.out.print("Character to find: ");
+        char c = input.nextLine().charAt(0);
+        int i, index = 0;
+        char ch;
+        for (i = 0; i < str.length(); i++) {
+            ch = str.charAt(i);
+            if (ch == c) {
+                index = i;
+            }
+        }
+        System.out.println(c + " is found at index: " + index);
+    }
+}
