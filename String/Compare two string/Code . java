@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class String_3_Compare {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter string 1: ");
+        String str1 = input.nextLine();
+        System.out.print("Enter string 2: ");
+        String str2 = input.nextLine();
+        boolean b = str1.equals(str2);
+        System.out.print("Given strings are equal: ");
+        System.out.print(b);
+    }
+}
