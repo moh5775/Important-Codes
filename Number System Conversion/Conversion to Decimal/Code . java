@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class NumberSystem_1_ConvertionIntoDecimal {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Binary Value: ");
+        String bin = input.nextLine();
+        Integer dec1 = Integer.parseInt(bin, 2);
+        System.out.println(bin + " (binary) : " + dec1 + " (Decimal)");
+        System.out.print("Hexa-Decimal Value: ");
+        String hexa = input.nextLine();
+        Integer dec2 = Integer.parseInt(hexa, 16);
+        System.out.println(hexa + " (hexa-decimal) : " + dec2 + " (Decimal)");
+        System.out.print("Octal Value: ");
+        String octal = input.nextLine();
+        Integer dec3 = Integer.parseInt(octal, 8);
+        System.out.println(octal + " (occtal) : " + dec3 + " (Decimal)");
+    }
+}
