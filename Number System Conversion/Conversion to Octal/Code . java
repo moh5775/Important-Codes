@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class NumberSystem_3_ConvertionToOctal {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        // Decimal to octal
+        System.out.print("Decimal Value: ");
+        int dec = input.nextInt();
+        String oct1 = Integer.toOctalString(dec);
+        System.out.println(dec + " (decimal) : " + oct1 + " (Octal)");
+        input.nextLine();
+        // Hexa-deimal to Octal
+        System.out.print("Hexa-Decimal Value: ");
+        String hexa = input.nextLine();
+        int dec_value = Integer.parseInt(hexa, 16);
+        String oct2 = Integer.toOctalString(dec_value);
+        System.out.println(hexa + " (hexa-decimal) : " + oct2 + " (Octal)");
+        // Binary to Octal
+        System.out.print("Binary Value: ");
+        String bin = input.nextLine();
+        int decimal_value = Integer.parseInt(bin, 2);
+        String oct3 = Integer.toOctalString(decimal_value);
+        System.out.println(bin + " (binary) : " + oct3 + " (Octal)");
+    }
+}
