@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class NumberSystem_4_ConversionToHexa {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        // Decimal to Hexa
+        System.out.print("Decimal Value: ");
+        int dec = input.nextInt();
+        String hex1 = Integer.toHexString(dec);
+        System.out.println(dec + " (decimal) : " + hex1 + " (Hexa-decimal)");
+        input.nextLine();
+        // Octal to Hexa-deimal
+        System.out.print("Octal Value: ");
+        String octal = input.nextLine();
+        int dec_value = Integer.parseInt(octal, 8);
+        String hex2 = Integer.toHexString(dec_value);
+        System.out.println(octal + " (octal) : " + hex2 + " (Hexa-deimal)");
+        // Binary to Hexa
+        System.out.print("Binary Value: ");
+        String bin = input.nextLine();
+        int decimal_value = Integer.parseInt(bin, 2);
+        String hex3 = Integer.toHexString(decimal_value);
+        System.out.println(bin + " (binary) : " + hex3 + " (Hexa-deimal)");
+        System.out.println();
+    }
+}
