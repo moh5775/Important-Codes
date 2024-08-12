@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Arr4_InsertElement {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int n, i, p, x;
+        System.out.print("Array Size: ");
+        n = input.nextInt();
+        System.out.print("Position: ");
+        p = input.nextInt();
+        System.out.print("What do you want to insert: ");
+        x = input.nextInt();
+        int[] a = new int[n + 1];
+        for (i = 0; i < n; i++) {
+            a[i] = input.nextInt();
+        }
+        for (i = n; i > p; i--) {
+            a[i] = a[i - 1];
+        }
+        a[p] = x;
+        System.out.print("After Insert: ");
+        for (i = 0; i <= n; i++) {
+            System.out.print(a[i] + " ");
+        }
+    }
+}
