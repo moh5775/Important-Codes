@@ -1,0 +1,30 @@
+
+import java.util.Scanner;
+
+public class Func_1_PrimeOrNot {
+    static int isPrime(int x) {
+        int flag = 0;
+        if (x < 2)
+            return 0;
+        for (int i = 2; i < x; i++) {
+            if (x % i == 0)
+                flag = 1;
+        }
+        if (flag == 0)
+            return 1;
+        else
+            return 0;
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int x;
+        System.out.print("Enter a number: ");
+        x = input.nextInt();
+        int prime_check = isPrime(x);
+        if (prime_check == 1)
+            System.out.println(x + " is prime");
+        else
+            System.out.println(x + " is not prime");
+    }
+}
