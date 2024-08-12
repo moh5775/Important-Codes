@@ -1,0 +1,34 @@
+
+import java.util.Scanner;
+
+public class Func_2_PrimeInRange {
+    static int isPrime(int x) {
+        int flag = 0;
+        if (x < 2)
+            return 0;
+        for (int i = 2; i < x; i++) {
+            if (x % i == 0)
+                flag = 1;
+        }
+        if (flag == 0)
+            return 1;
+        else
+            return 0;
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int x, y, i;
+        System.out.print("Enter lower number: ");
+        x = input.nextInt();
+        System.out.print("Enter upper number: ");
+        y = input.nextInt();
+        System.out.print("Prime Numbers are: ");
+        for (i = x; i <= y; i++) {
+            int prime_check = isPrime(i);
+            if (prime_check == 1)
+                System.out.print(i + " ");
+
+        }
+    }
+}
