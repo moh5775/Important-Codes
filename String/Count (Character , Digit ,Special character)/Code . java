@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class String_4_CountCharDigSpecialChar {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter String: ");
+        String str = input.nextLine();
+        int i;
+        int alph = 0;
+        int digit = 0;
+        int speial = 0;
+        char ch;
+        for (i = 0; i < str.length(); i++) {
+            ch = str.charAt(i);
+            if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
+                alph++;
+            else if (ch >= '0' && ch <= '9')
+                digit++;
+            else {
+                speial++;
+            }
+        }
+        System.out.println("Alphabet: " + alph + "\nDigit: " + digit + "\nSpecial character: " + speial);
+    }
+}
