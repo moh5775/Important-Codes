@@ -1,0 +1,20 @@
+
+import java.util.Scanner;
+
+public class String_5_WordCount {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter String: ");
+        String str = input.nextLine();
+        int i;
+        char ch;
+        int word = 1;
+        for (i = 0; i < str.length(); i++) {
+            ch = str.charAt(i);
+            if (ch == ' ' || ch == '\t' || ch == '\n') {
+                word++;
+            }
+        }
+        System.out.print("Word: " + word);
+    }
+}
