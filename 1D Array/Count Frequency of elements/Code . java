@@ -1,0 +1,30 @@
+
+import java.util.Scanner;
+
+public class Arr10_FrequencyOfElements {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int n, i;
+        System.out.print("n: ");
+        n = input.nextInt();
+        int[] a = new int[n];
+        int max_value = 100;
+        int[] freq = new int[max_value + 1];
+        for (i = 0; i <= max_value; i++) {
+            freq[i] = 0;
+        }
+        for (i = 0; i < n; i++) {
+
+            a[i] = input.nextInt();
+        }
+        for (i = 0; i < n; i++) {
+
+            freq[a[i]]++;
+        }
+        for (i = 0; i <= max_value; i++) {
+            if (freq[i] > 0)
+                System.out.println("Frequency of " + i + " : " + freq[i]);
+        }
+
+    }
+}
