@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class String_20_RemoveFirstOccuranceOfaCharacter {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter String: ");
+        String str = input.nextLine();
+        System.out.print("Which Character you want to remove: ");
+        char ch = input.next().charAt(0);
+        int index = str.indexOf(ch);
+        if (index != -1) {
+            str = str.substring(0, index) + str.substring(index + 1);
+        }
+        System.out.println("After Removing '" + ch + "' : " + str);
+    }
+}
