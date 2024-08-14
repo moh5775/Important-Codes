@@ -1,0 +1,26 @@
+
+import java.util.Scanner;
+
+public class String_27_FirstOccuranceOfWord {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("\n\nenter string: ");
+        String str = input.nextLine();
+        System.out.print("Word to find: ");
+        String word = input.nextLine();
+        String[] splitted = str.split(" ");
+        int pos = -1;
+        int i;
+        for (i = 0; i < splitted.length; i++) {
+            if (splitted[i].equalsIgnoreCase(word)) {
+                pos = i + 1;
+                break;
+            }
+        }
+        if (pos != -1) {
+            System.out.println("1st occurance of '" + word + "' is at position : " + pos);
+        } else {
+            System.out.println("Word not found");
+        }
+    }
+}
