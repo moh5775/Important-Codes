@@ -1,0 +1,14 @@
+
+import java.util.Scanner;
+
+public class String_16_SplitIntoWords {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter String: ");
+        String str = input.nextLine();
+        String[] splt = str.split(" ");
+        System.out.println("Splitted String Depending on \" \" : ");
+        for (String x : splt)
+            System.out.println(x);
+    }
+}
