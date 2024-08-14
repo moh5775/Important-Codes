@@ -1,0 +1,17 @@
+
+import java.util.Scanner;
+
+public class String_13_ReversedWordsString {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter string: ");
+        String str = input.nextLine();
+        String[] words = str.split(" ");
+        int i;
+        StringBuffer rev = new StringBuffer();
+        for (i = words.length - 1; i >= 0; i--) {
+            rev.append(words[i]).append(" ");
+        }
+        System.out.println("String of Reverse ordered word : " + rev.toString().trim());
+    }
+}
