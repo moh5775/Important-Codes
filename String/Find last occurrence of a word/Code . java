@@ -1,0 +1,24 @@
+
+import java.util.Scanner;
+
+public class String_28_LastOccuranceOfWord {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter String: ");
+        String str = input.nextLine();
+        System.out.print("Word: ");
+        String word = input.nextLine();
+        String[] splitted = str.split(" ");
+        int pos = 0;
+        int i;
+        for (i = 0; i < splitted.length; i++) {
+            if (splitted[i].equalsIgnoreCase(word))
+                ;
+            {
+                pos = i;
+            }
+        }
+        if (pos > 0)
+            System.out.println("Last position of '" + word + "' : " + pos);
+    }
+}
