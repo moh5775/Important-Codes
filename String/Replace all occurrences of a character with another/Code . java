@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class String_26_ReplaceAllOccuranceOfCharacterWithAnother {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter String: ");
+        String str = input.nextLine();
+        System.out.print("old: ");
+        char old = input.nextLine().charAt(0);
+        System.out.print("Replace with: ");
+        char neo = input.nextLine().charAt(0);
+        String modified = str.replace(old, neo);
+        System.out.println("Modified String: " + modified);
+    }
+}
