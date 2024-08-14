@@ -1,0 +1,10 @@
+import java.util.Scanner;
+
+public class String_32_DeleteAllExtraBlankSpace {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter String: ");
+        String str = input.nextLine();
+        System.out.println("After removing: " + str.trim().replaceAll("\\s+", " "));
+    }
+}
