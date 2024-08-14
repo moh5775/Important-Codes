@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+public class String_11_Length {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter String: ");
+        String str = input.nextLine();
+        int length = str.length();
+
+        System.out.println("Length of the string: " + length);
+    }
+}
