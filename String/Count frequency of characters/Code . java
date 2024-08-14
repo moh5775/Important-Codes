@@ -1,0 +1,28 @@
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class String_19_CountFrequencyOfEachCharacter {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter String: ");
+        String str = input.nextLine();
+        HashMap<String, Integer> count = new HashMap<>();
+        for (char c : str.toCharArray()) {
+            String key = (c == ' ') ? "space" : String.valueOf(c);
+            if (count.containsKey(key)) {
+                count.put(key, count.get(key) + 1);
+            } else {
+                count.put(key, 1);
+            }
+        }
+        if (count.containsKey("space")) {
+            System.out.println("space : " + count.get("space"));
+        }
+        for (HashMap.Entry<String, Integer> entry : count.entrySet()) {
+            if (!entry.getKey().equals("space")) {
+                System.out.println(entry.getKey() + "  : " + entry.getValue());
+            }
+        }
+    }
+}
