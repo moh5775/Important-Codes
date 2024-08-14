@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class String_22_RemoveAllOccurancesOfACharacter {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter String: ");
+        String str = input.nextLine();
+        System.out.print("Character to remove: ");
+        char ch = input.nextLine().charAt(0);
+        String modified = str.replace(Character.toString(ch), "");
+        System.out.println("Modified String: " + modified);
+    }
+}
