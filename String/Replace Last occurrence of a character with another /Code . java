@@ -1,0 +1,19 @@
+
+import java.util.Scanner;
+
+public class String_25_ReplaceLastOccuranceOfCharacterWithAnother {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter String: ");
+        String str = input.nextLine();
+        System.out.print("old: ");
+        char old = input.nextLine().charAt(0);
+        System.out.print("Replace with: ");
+        char neo = input.nextLine().charAt(0);
+        int index = str.lastIndexOf(old);
+        if (index != -1) {
+            str = str.substring(0, index) + neo + str.substring(index + 1);
+        }
+        System.out.print("Modified String: " + str);
+    }
+}
