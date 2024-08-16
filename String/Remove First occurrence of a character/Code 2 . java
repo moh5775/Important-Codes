@@ -1,0 +1,13 @@
+
+import java.util.Scanner;
+
+public class CF_A {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String str = input.nextLine();
+        char ch = input.nextLine().charAt(0);
+        String chr = Character.toString(ch);
+        str = str.replaceFirst(chr, "");
+        System.out.println(str);
+    }
+}
