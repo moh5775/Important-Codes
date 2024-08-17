@@ -1,0 +1,26 @@
+
+import java.util.Scanner;
+
+public class CF_A {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String str = input.nextLine();
+        /*
+         * initializing an empty string which will store unique characters of the given
+         * string
+         */
+        String result = "";
+        int i;
+        for (i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);// 'c' is the ith character of given string
+            /*
+             * if 'c' has no index in result string , 'c' is unique & will be added with
+             * result string.
+             */
+            if (result.indexOf(c) == -1) {
+                result = result + c;
+            }
+        }
+        System.out.println(result);// finally,result is a string of unique characters
+    }
+}
