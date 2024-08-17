@@ -1,10 +1,16 @@
+
 import java.util.Scanner;
 
-public class String_32_DeleteAllExtraBlankSpace {
+public class CF_A {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.print("Enter String: ");
         String str = input.nextLine();
-        System.out.println("After removing: " + str.trim().replaceAll("\\s+", " "));
+        /*
+         * trim():to trim leading & trailing whitespace characters.
+         * \\s : Represents any whitespace character(tab,spaces).
+         * + :one or more whitespace characters.
+         */
+        String modified = str.trim().replaceAll("\\s+", " ");
+        System.out.println(modified);
     }
 }
