@@ -1,0 +1,15 @@
+
+import java.util.Scanner;
+
+public class CF_A {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String str = input.nextLine();
+        String[] words = str.split(" ");
+        int count = 0;
+        for (String x : words) {
+            count++;// Word count
+        }
+        System.out.println(count);
+    }
+}
