@@ -1,27 +1,37 @@
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
-public class String_19_CountFrequencyOfEachCharacter {
+public class CF_A {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.print("Enter String: ");
         String str = input.nextLine();
-        HashMap<String, Integer> count = new HashMap<>();
-        for (char c : str.toCharArray()) {
-            String key = (c == ' ') ? "space" : String.valueOf(c);
-            if (count.containsKey(key)) {
-                count.put(key, count.get(key) + 1);
+        HashMap<Character, Integer> map = new HashMap<>(); // to store characters as key & frequencies as value
+        char[] chars = str.toCharArray(); // to convert input string into a character array
+        for (char ch : chars) {
+            if (!map.containsKey(ch)) // if the character is not already in the map,
+            {
+                map.put(ch, 1);// add the character in the map with a frequency 1
             } else {
-                count.put(key, 1);
+                int cnt = map.get(ch);// if the character is already in the map, count its current frequency
+                map.put(ch, cnt + 1);// update frequency by incrementing 1
             }
         }
-        if (count.containsKey("space")) {
-            System.out.println("space : " + count.get("space"));
-        }
-        for (HashMap.Entry<String, Integer> entry : count.entrySet()) {
-            if (!entry.getKey().equals("space")) {
-                System.out.println(entry.getKey() + "  : " + entry.getValue());
+        
+        /*
+         * ent: stores a single key-value pair for each iteration.
+         * map.entryset: method which allows to access each key-value pair in the
+         * HashMap
+         */
+
+        for (Map.Entry<Character, Integer> ent : map.entrySet()) {
+            char cha = ent.getKey();// to get the character(key) from the current map entry
+            int freq = ent.getValue();// to get the frequency(value) from the current map entry
+            if (cha == ' ') {
+                System.out.println("Space : " + freq);// if the character is a space
+            } else {
+                System.out.println(cha + "  : " + freq);
             }
         }
     }
