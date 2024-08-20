@@ -1,0 +1,32 @@
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class cff {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String s1 = input.nextLine();
+        String str = s1.toLowerCase();
+        HashMap<Character, Integer> map = new HashMap<>();
+        char[] chars = str.toCharArray();
+        for (char ch : chars) {
+            if (!map.containsKey(ch))
+                map.put(ch, 1);
+            else {
+                int cnt = map.get(ch);
+                map.put(ch, cnt + 1);
+            }
+        }
+        boolean uni = true;
+        for (int count : map.values()) {
+            if (count != 1) {
+                uni = false;
+                break;
+            }
+        }
+        if (uni) {
+            System.out.println("YES");
+        } else {
+            System.out.println("No");
+        }
+    }
+}
