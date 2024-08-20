@@ -1,0 +1,25 @@
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+
+public class hju {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        input.nextLine();
+        String str = input.nextLine();
+        str = str.toLowerCase();
+        Set<Character> letters = new HashSet<>();
+        for (char ch : str.toCharArray()) {
+            if (ch >= 'a' && ch <= 'z') {
+                letters.add(ch);
+            }
+        }
+         System.out.println(letters);
+        if (letters.size() == 26) {
+            System.out.println("YES");
+        } else {
+            System.out.println("NO");
+        }
+    }
+}
