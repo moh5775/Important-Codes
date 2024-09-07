@@ -2,8 +2,12 @@
 int main()
 {
     int n,num;
-    scanf("%d %d",&n,&num);
+    printf("Array size: ");
+    scanf("%d",&n);
+    printf("number want to search: ");
+    scanf("%d",&num);
     int a[n];
+    printf("Array elements: ");
     for(int i=0; i<n; i++)
     {
         scanf("%d",&a[i]);
@@ -21,6 +25,7 @@ int main()
             }
         }
     }
+    printf("Sorted array elements: ");
     for(int i=0; i<n; i++)
     {
         printf("%d ",a[i]);
