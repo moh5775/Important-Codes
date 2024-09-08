@@ -48,8 +48,10 @@ int main()
         else
         {
             k=mid;
+            printf("\n index: %d\n",k);
             break;
         }
     }
-    printf("\n index: %d\n",k);
+    if(k==-1)
+    printf("not in list");
 }
