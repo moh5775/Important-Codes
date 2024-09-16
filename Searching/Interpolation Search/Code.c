@@ -36,7 +36,7 @@ int main() {
                 index = mid;
                 break;
             }
-            if (a[mid] < key) {
+            else if (a[mid] < key) {
                 first = mid + 1;
             } else {
                 last = mid - 1;
